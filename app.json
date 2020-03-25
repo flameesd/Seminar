@@ -1,0 +1,27 @@
+{
+  "id": "3597272d-2f62-4b17-9d3a-c113dd2210ed",
+  "name": "Seminar",
+  "publisher": "FLAME ENTERPRISE SOLUTIONS & DEVELOPMENT CO.,LTD.",
+  "version": "1.0.0.0",
+  "brief": "Seminar convert to AL Course 80437 ",
+  "description": "Seminar convert to AL Course 80437 ",
+"privacyStatement": "https://esd-blog.com/privacy-policy/",
+  "EULA": "https://www.gnu.org/licenses/gpl-3.0.txt",
+  "help": "https://esd-blog.com",
+  "url": "https://esd-blog.com",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 999999999
+    }
+  ],
+  "showMyCode": true,
+  "runtime": "3.0",
+  "target": "Internal"
+}
+
+  

@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SeminarRegistrationHeader">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>SeminarRegistrationHeader</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SeminarRegistrationHeader</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="No_SeminarRegistrationHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>No_SeminarRegistrationHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>No_SeminarRegistrationHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SeminarNo_SeminarRegistrationHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>SeminarNo_SeminarRegistrationHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SeminarNo_SeminarRegistrationHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SeminarName_SeminarRegistrationHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>SeminarName_SeminarRegistrationHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SeminarName_SeminarRegistrationHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="StartingDate_SeminarRegistrationHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>StartingDate_SeminarRegistrationHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>StartingDate_SeminarRegistrationHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Duration_SeminarRegistrationHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Duration_SeminarRegistrationHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Duration_SeminarRegistrationHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="InstructorName_SeminarRegistrationHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>InstructorName_SeminarRegistrationHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>InstructorName_SeminarRegistrationHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RoomName_SeminarRegistrationHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>RoomName_SeminarRegistrationHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>RoomName_SeminarRegistrationHeaderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BilltoCustomerNo_SeminarRegistrationLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>BilltoCustomerNo_SeminarRegistrationLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>BilltoCustomerNo_SeminarRegistrationLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ParticipantContactNo_SeminarRegistrationLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ParticipantContactNo_SeminarRegistrationLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ParticipantContactNo_SeminarRegistrationLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ParticipantName_SeminarRegistrationLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ParticipantName_SeminarRegistrationLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ParticipantName_SeminarRegistrationLineCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_SeminarRegistrationHeader">
+          <DataField>No_SeminarRegistrationHeader</DataField>
+        </Field>
+        <Field Name="SeminarNo_SeminarRegistrationHeader">
+          <DataField>SeminarNo_SeminarRegistrationHeader</DataField>
+        </Field>
+        <Field Name="SeminarName_SeminarRegistrationHeader">
+          <DataField>SeminarName_SeminarRegistrationHeader</DataField>
+        </Field>
+        <Field Name="StartingDate_SeminarRegistrationHeader">
+          <DataField>StartingDate_SeminarRegistrationHeader</DataField>
+        </Field>
+        <Field Name="Duration_SeminarRegistrationHeader">
+          <DataField>Duration_SeminarRegistrationHeader</DataField>
+        </Field>
+        <Field Name="Duration_SeminarRegistrationHeaderFormat">
+          <DataField>Duration_SeminarRegistrationHeaderFormat</DataField>
+        </Field>
+        <Field Name="InstructorName_SeminarRegistrationHeader">
+          <DataField>InstructorName_SeminarRegistrationHeader</DataField>
+        </Field>
+        <Field Name="RoomName_SeminarRegistrationHeader">
+          <DataField>RoomName_SeminarRegistrationHeader</DataField>
+        </Field>
+        <Field Name="BilltoCustomerNo_SeminarRegistrationLine">
+          <DataField>BilltoCustomerNo_SeminarRegistrationLine</DataField>
+        </Field>
+        <Field Name="ParticipantContactNo_SeminarRegistrationLine">
+          <DataField>ParticipantContactNo_SeminarRegistrationLine</DataField>
+        </Field>
+        <Field Name="ParticipantName_SeminarRegistrationLine">
+          <DataField>ParticipantName_SeminarRegistrationLine</DataField>
+        </Field>
+        <Field Name="CompanyInformation_Name">
+          <DataField>CompanyInformation_Name</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
